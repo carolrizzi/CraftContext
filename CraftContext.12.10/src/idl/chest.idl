@@ -1,0 +1,28 @@
+
+module br {
+module ufes {
+module inf {
+module lprm {
+module generated{
+
+    // --- CONSTANTS --- //
+    
+    // --- ENUMERATIONS --- //
+	
+	// --- EXCEPTIONS --- //
+	
+    // --- SERVICES --- //
+    
+    // --- DATAS --- //
+    
+    // *** Event *** //
+    
+    // *** Command *** //
+    
+};
+};
+};
+};
+};
+
+  
