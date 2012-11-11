@@ -1,0 +1,36 @@
+#ifndef _DOOR_IDL_
+#define _DOOR_IDL_
+
+#include <common.idl>
+
+module br {
+module ufes {
+module inf {
+module lprm {
+module generated {
+
+    // --- CONSTANTS --- //
+    
+    // --- ENUMERATIONS --- //
+    enum DoorEventType {EVT_OPEN, EVT_CLOSE};
+    enum DoorCommandType {CMD_LIST, CMD_ADD, CMD_REMOVE, CMD_OPEN, CMD_CLOSE};
+	
+	// --- EXCEPTIONS --- //
+	
+    // --- SERVICES --- //
+    
+    // --- DATAS --- //
+    
+    // *** Event *** //
+    
+    // *** Command *** //
+    
+};
+};
+};
+};
+};
+
+#endif
+
+  

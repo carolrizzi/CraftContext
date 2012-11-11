@@ -1,0 +1,50 @@
+#ifndef _COMMON_IDL_
+#define _COMMON_IDL_
+
+module br {
+module ufes {
+module inf {
+module lprm {
+module generated {
+
+	// --- ENUMERATIONS --- //
+	enum RegainHealthReason {REGEN, SATIATED, EATING, ENDER_CRYSTAL, MAGIC_REASON, MAGIC_REGEN, CUSTOM_REASON};	
+	enum DamageCause {CONTACT, ENTITY_ATTACK, PROJECTILE, SUFFOCATION, FALL, FIRE_CAUSE, FIRE_TICK, MELTING, LAVA_CAUSE, DROWNING, BLOCK_EXPLOSION, ENTITY_EXPLOSION, VOID_CAUSE, LIGHTNING, SUICIDE, STARVATION, POISON, MAGIC_CAUSE, CUSTOM_CAUSE};
+
+	// --- VALUETYPES --- //
+	valuetype Position {
+		private double x;
+		private double y;
+		private double z;
+		
+		double getX();
+		double getY();
+		double getZ();
+	};
+
+	valuetype Area {
+		private Position center;
+		private double xWidth;
+		private double zWidth;
+		
+		Position getCenter();
+		double getXWidth();
+		double getZWidth();
+	};
+	
+	// --- TYPEDEFS --- //
+	typedef sequence < string > strings;
+	
+	// --- EXCEPTIONS --- //
+	exception InvalidPosition {
+		Position position;
+		string cause;
+	};
+
+};
+};
+};
+};
+};
+
+#endif
