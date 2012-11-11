@@ -130,8 +130,8 @@ public class CraftContextTest {
 							for(int i = 2; i < in.length; i++)
 								msg += in[i] + " ";
 							pService.disconnectPlayer(in[1], msg);
+							System.out.println("Player " + in[1] + " was disconnected.");
 						}
-						System.out.println("Player " + in[1] + " was disconnected.");
 						
 					}else if(cmd.toLowerCase().equals("p3") || cmd.toLowerCase().equals("get-player-position")){
 						if(in.length < 2) printParametersError();
@@ -146,12 +146,8 @@ public class CraftContextTest {
 							String msg = "";
 							for(int i = 2; i < in.length; i++)
 								msg += in[i] + " ";
-							try{
 								pService.sendMessageToPlayer(in[1], msg);
 								System.out.println("Message successfully sent to player " + in[1] + ".");
-							}catch (Exception e) {
-								e.printStackTrace();
-							}
 						}
 						
 					}else if(cmd.toLowerCase().equals("p5") || cmd.toLowerCase().equals("send-message-to-connected-players")){
@@ -160,12 +156,8 @@ public class CraftContextTest {
 							String msg = "";
 							for(int i = 1; i < in.length; i++)
 								msg += in[i] + " ";
-							try{
 								pService.sendMessageToConnectedPlayers(msg);
 								System.out.println("Message successfully sent to all connected players.");
-							}catch (Exception e) {
-								e.printStackTrace();
-							}
 						}
 						
 					}else if(cmd.toLowerCase().equals("p6") || cmd.toLowerCase().equals("get-player-food-level")){
@@ -249,7 +241,9 @@ public class CraftContextTest {
 				} catch (BuildingException e) {
 					System.err.println("Unkown Building Exception: " + e.msg);
 				} catch (IOException e) {
-					System.out.println("IOException: Could not read user's command.");
+					System.out.println("IOException: Could not read user command.");
+				}catch (Exception e) {
+					System.out.println("Unexpected Exception: Could not execute user command.");
 				}
 				try {
 					sleep(500);
