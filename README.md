@@ -22,16 +22,16 @@ CraftContext is a free and open-source tool and we will be very grateful if you 
 
 * **CraftContextClient**
 
-This is the implementation of a helper for developing a client application for CraftContext. The JAR file generated from this project provides some JacORB abstractions, helping to hide from developers issues not related to their main goal, which is to test a context-aware application. This helper, however, was built only for client applications written in Java. In order to run a CraftContext client in other language than Java, you should install and use the idl compiler of the desired language and implement a client package similar to the one provided here. We intend to provide such helper for further programming languages in the next versions of CraftContext.
+This is the implementation of a helper for developing a client application for CraftContext. The JAR file generated from this project provides some JacORB abstractions, helping to hide from developers issues not related to their main goal, which is to test a context-aware application. This helper, however, was built only for client applications written in Java. In order to run a CraftContext client in other language than Java, you should install and use the idl compiler of the desired language and implement a client package similar to the one provided here. We intend to provide such helper for other programming languages in the next versions of CraftContext.
 
 * **CraftContextTest**
 
 This is a example of client application implementation. This project does not include features of context-awareness, instead it is objectively focused on testing all the functionalities of CraftContext. This application shows a menu, by typing "help", which lists all the possible actions and commands that users can test. Remember that your actions/commands maybe will not take effect if there are no players logged in the server.
 
-Important Observations
+Important Remarks
 ----------------------
 
-CraftContext has presented some unexpected errors when run by Java 7. We strongly recommend to use version 6 of Java, in order to reach an better performance and avoid errors.
+CraftContext has presented some unexpected errors when run by Java 7. We strongly recommend to use version 6 of Java, in order to reach a better performance and avoid errors.
 
 
 Minecraft Installation Instructions
@@ -81,7 +81,7 @@ For example:
 
 `/player set_health 20`
 
-The first portion of the command ("player") means that this command has to do with changing and/or consulting players' stuff. The second part ("set_health") is the command itself, which is requesting to change the health level of the player who is typing the command. The last part is the set of parameters, which in case has only one parameter (the number 20), i.e., the new health level of the player.
+The first portion of the command ("player") means that this command has to do with changing and/or consulting players' attributes. The second part ("set_health") is the command itself, which is requesting to change the health level of the player who is typing the command. The last part is the set of parameters, which in case has only one parameter (the number 20), i.e., the new health level of the player.
 
 CraftContext's current version allows players to perform the following commands:
 
