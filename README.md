@@ -5,7 +5,7 @@ CraftContext
 Downloading and Running
 -----------------------
 
-The complete package of CraftContext v12.11 can be download in [here](https://github.com/downloads/carolrizzi/CraftContext/CraftContext.12.11.zip). This zip file contains all the needed executable and libraries for running both server and client of CraftContext. See the README file inside the package for detailed running instructions.
+The complete package of CraftContext v12.11 can be download [here](https://github.com/downloads/carolrizzi/CraftContext/CraftContext.12.11.zip). This zip file contains all the needed executable and libraries for running both server and client of CraftContext. See the README file inside the package for detailed running instructions.
 
 Projects
 --------
@@ -16,7 +16,7 @@ This project contains the CraftContext server implementation. There are two fund
 
 - [CraftBukkit v1.1-R4](http://dl.bukkit.org/downloads/craftbukkit/get/00720_1.1-R4/craftbukkit.jar): Bukkit is a modified server of Minecraft, which allows creating plugins for extending the game. CraftContext is currently a extension for Bukkit server. All actions in CraftContext related to Minecraft are made by means of this library.
 
-- [JacORB v2.3.1](http://www.jacorb.org/releases/2.3.1/jacorb-2.3.1-src.zip): JacORB is a Java implementation of CORBA (Common Object Request Broker Architecture), which is a standard defined by OMG ([Object Management Group](http://www.omg.org/)) for communication among heterogeneous distributed systems. All remote connections and communication issues are handled by means of JacORB.
+- [JacORB v2.3.1](http://www.jacorb.org/releases/2.3.1/jacorb-2.3.1-src.zip): JacORB is a Java implementation of [CORBA](http://www.omg.org/corba/) (Common Object Request Broker Architecture), which is a standard defined by [OMG](http://www.omg.org/) (Object Management Group) for communication among heterogeneous distributed systems. All remote connections and communication issues are handled by means of JacORB.
 
 CraftContext is a free and open-source tool and we will be very grateful if you help us to improve it. Unfortunately, we still don't have a tutorial for building new modules of events and services for CraftContext, but we intend to provide it soon.
 
@@ -37,24 +37,24 @@ CraftContext has presented some unexpected errors when run by Java 7. We strongl
 Minecraft Installation Instructions
 -----------------------------------
 
-1. Installing the game
+* Installing the game
 
-1.1. If you don't have a Minecraft account, you can buy it in the official Minecraft site: http://minecraft.net/
-1.2. Download and run the game (double click on minecraft.jar).
-1.3. Sign in the game and wait the downloads to finish.
-1.4. Close the game.
+1. If you don't have a Minecraft account, you can buy it in the official Minecraft site: http://minecraft.net/
+2. Download and run the game (double click on minecraft.jar).
+3. Sign in the game and wait the downloads to finish.
+4. Close the game.
 
-2. Setting the correct version of Minecraft for run it with CraftContext.
+* Setting the correct version of Minecraft for run it with CraftContext.
 
-2.1. Download the minecraft.jar file [here](https://github.com/downloads/carolrizzi/CraftContext/minecraft.jar)
-2.2. Open the directory ".minecraft", which is inside your home folder. It may be hidden, case in which you have to change your directory visualization options for showing the hidden files.
-2.3. Open the bin directory and replace the minecraft.jar file by the one you have downloaded in step 2.1.
-2.4. Run the game in the same way you made on the step 1.3. If the game ask to be upgraded, click on "Not Now".
-2.5. Run the CraftContext server, following the instructions on the previous section.
-2.6. In the game screen, click on the button "Multiplayer" and then click in "Add server".
-2.7. Provide a name and the ip address to the server where CraftContext is running. Click on "Done".
-2.8. Select the server you have added on previous step and click in "Join Server".
-2.9. You are now logged in the CraftContext server.
+1. Download the minecraft.jar file [here](https://github.com/downloads/carolrizzi/CraftContext/minecraft.jar)
+2. Open the directory ".minecraft", which is inside your home folder. It may be hidden, case in which you have to change your directory visualization options for showing the hidden files.
+3. Open the bin directory and replace the minecraft.jar file by the one you have downloaded in step 2.1.
+4. Run the game in the same way you made on the step 1.3. If the game ask to be upgraded, click on "Not Now".
+5. Run the CraftContext server, following the instructions on the previous section.
+6. In the game screen, click on the button "Multiplayer" and then click in "Add server".
+7. Provide a name and the ip address to the server where CraftContext is running. Click on "Done".
+8. Select the server you have added on previous step and click in "Join Server".
+9. You are now logged in the CraftContext server.
 
 Version 12.11 - Release Notes
 -----------------------------
@@ -87,14 +87,17 @@ CraftContext's current version allows players to perform the following commands:
 
 - Set player's food level: When the player wants to change his own level of starvation. Command format:
 	`/player set_food <level_number>`
+
 	The level_number parameter defines the new starvation level of the player. This parameter should be between 0 (starving to the point of taking damage) and 20 (fully fed).
 
 - Set player's health: When the player wants to change his own level of health. Command format:
 	`/player set_health <level_number>`
+
 	The level_number parameter defines the new health level of the player. This parameter should be between 0 (dead) and 20 (completely healed and healthy).
 	
 - Add new building: When the player wants to register a new building and define its physical limits. Command Format:
 	`/building add "<name>" "<type>" "<address>" <x-width> <z-width> <height>`
+
 	Where:
 	- name: The name of the building that will be created.
 	- type: The type of the building that will be created. It is a kind of label, such as "restaurant", "hospital", "house", etc.
@@ -108,10 +111,12 @@ CraftContext's current version allows players to perform the following commands:
 	
 - List existing buildings: When the player wants to know what are the existing buildings. Command format:
 	`/building list`
+
 	No parameter is required.
 	
 - Remove existing building: When the player want to delete a existing building from the game. Command format:
 	`/building remove "<name>" <physical-destruction>`
+
 	Where:
 	- name: The name of the building that will be removed. Must be written in quotes.
 	- physical-destruction: A boolean parameter for defining whether the building's deletion includes its physical destruction, i.e., whether the all the blocks in the building's area will be removed. Type "true" for physical destruction and "false" for removal only in registration level.
