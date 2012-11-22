@@ -1,6 +1,6 @@
 name: CraftContext
 main: br.ufes.inf.lprm.bukkit.Server
-version: 12.10.1
+version: 12.11
 description: >
     A tool, based on Minecraft, for helping context aware applications tests. Make possible to use the Minecraft game to simulate a context source.
 commands:

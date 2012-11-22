@@ -71,7 +71,7 @@ public class BuildingServiceImpl extends BuildingServicePOA{
 		try{
 			Player player = Bukkit.getServer().getPlayer(playerName);
 			if(BuildingDataBase.buildings.size() <= 0){
-				player.sendMessage("There is no buildings.");
+				player.sendMessage("There are no buildings.");
 				return;
 			}
 			
